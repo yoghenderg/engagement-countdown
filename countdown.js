@@ -26,8 +26,8 @@ function tick() {
   const values = [Math.floor(left/86400), Math.floor(left/3600)%24, Math.floor(left/60)%60, left%60];
   ['days','hours','minutes','seconds'].forEach((id,i) => document.getElementById(id).textContent = String(values[i]).padStart(2,'0'));
   if (phase !== currentPhase) {
-    const titles = {engagement:'We are getting engaged',engaged:'We are engaged 💍',wedding:'We are getting married',married:'We are married 💍'};
-    document.querySelector('h1').textContent = titles[phase];
+    const titles = {engagement:'We are getting engaged!',engaged:'We are engaged!',wedding:'We are getting married!',married:'We are married!'};
+    document.querySelector('#countdown-title').textContent = titles[phase];
     document.title = titles[phase] + ' — Yoghender & Shalini';
     document.querySelector('.countdown').setAttribute('aria-label', celebrating ? 'Celebrating together' : 'Time until our ' + (phase === 'engagement' ? 'engagement' : 'wedding'));
     const calendar = document.querySelector('.calendar');
