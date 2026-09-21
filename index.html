@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#641c2b">
+<title>We are getting engaged — Yoghender & Shalini</title>
+<meta name="description" content="Counting down to Yoghender and Shalini’s engagement on 24 October 2026.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@400;500&display=swap">
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#641c2b;color:#e8c48f}body{font-family:'DM Sans',sans-serif}.photo,.veil{position:fixed;inset:0;pointer-events:none}.photo{background:#641c2b url('https://engagementreservation.yoghenshalini.com/assets/couple-desktop-v2.png') center bottom/100% auto no-repeat}.veil{background:linear-gradient(0deg,rgba(36,37,39,.56),rgba(56,56,58,.3) 24%,transparent 72%)}main{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 20px 14vh;text-align:center}h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(38px,4.5vw,76px);line-height:1.1;margin:0 0 28px;text-shadow:0 2px 20px #3c102540}.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(560px,100%);padding:24px 12px;border:1px solid #e8c48f65;border-radius:8px;background:transparent;box-shadow:0 14px 44px #23071020}.unit{position:relative}.unit:not(:last-child):after{content:':';position:absolute;right:-4px;top:0;font-size:clamp(30px,4vw,52px);font-weight:400;opacity:.65}.value{display:block;font-size:clamp(32px,4vw,56px);font-weight:400;font-variant-numeric:tabular-nums;line-height:1.15}.label{display:block;margin-top:12px;font-size:10px;letter-spacing:2px;text-transform:uppercase}.celebrate{font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;margin:18px 0 0}[hidden]{display:none!important}@media(max-width:760px){.photo{background-image:url('https://engagementreservation.yoghenshalini.com/assets/couple-maroon.png')}.veil{background:linear-gradient(0deg,#24252770,transparent 80%)}main{justify-content:flex-start;padding-top:clamp(100px,23svh,210px)}h1{max-width:330px;font-size:44px;margin-bottom:24px}.countdown{max-width:380px;padding:22px 8px}.label{font-size:9px;letter-spacing:1px}.unit:not(:last-child):after{right:-3px;font-size:30px}}
+</style>
+</head>
+<body><div class="photo" aria-hidden="true"></div><div class="veil" aria-hidden="true"></div><main><h1>We are getting engaged</h1><div class="countdown" role="timer" aria-label="Time until our engagement"><div class="unit"><span class="value" id="days">00</span><span class="label">Days</span></div><div class="unit"><span class="value" id="hours">00</span><span class="label">Hours</span></div><div class="unit"><span class="value" id="minutes">00</span><span class="label">Minutes</span></div><div class="unit"><span class="value" id="seconds">00</span><span class="label">Seconds</span></div></div><p class="celebrate" id="celebrate" hidden>Our celebration begins.</p></main>
+<script>
+const engagementTime=Date.parse('2026-10-24T18:30:00+08:00');
+function tick(){const left=Math.max(0,Math.floor((engagementTime-Date.now())/1000));const values=[Math.floor(left/86400),Math.floor(left/3600)%24,Math.floor(left/60)%60,left%60];['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=String(values[i]).padStart(2,'0'));document.getElementById('celebrate').hidden=left>0;}
+tick();setInterval(tick,1000);document.addEventListener('visibilitychange',tick);
+</script></body></html>
